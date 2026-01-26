@@ -112,7 +112,7 @@ export default function keylogger() {
                 showConfirmButton: false,
                 background: "rgb(62, 105, 121)",
                 customClass: 'alert',
-                html: '<video style="overflow: visible; height: 80vh; width: 65vw;" autoplay unmuted src="./assets/videos/suprise.mp4" id="suprise"></video>',
+                html: '<img style="overflow: visible; height: 50vh; width: 27vw;" autoplay unmuted src="./assets/videos/suprise.webp" id="suprise"></img>',
                 timer: 8000
             })
         }
