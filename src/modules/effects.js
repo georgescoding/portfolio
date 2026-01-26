@@ -92,6 +92,9 @@ export function slideshow(n, captions) {
     return slideIndex - 1;
 }
 
+
+
+// maybe add more videos and randomize them
 export default function keylogger() {
     let pattern = ['s', 'u', 'p', 'r', 'i', 's', 'e'],
         current = 0;
