@@ -7,5 +7,5 @@
     "minesweeper": "Command terminal adaptation of the retro game Minesweeper. Created using only C++.",
     "calculator": "A simple calculator app with basic mathematical functions. Built using ASP.NET with C#.",
     "multivibrator": "An astable multivibrator PCB designed in Altium Designer, built for stable pulse generation and analyzed using a transient simulation.",
-    "logicGates": "logic gates"
+    "alu": "4 bit ALU"
 }

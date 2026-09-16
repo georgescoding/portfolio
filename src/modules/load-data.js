@@ -402,7 +402,7 @@ export function summary(mainPage) {
     if (!mainPage) {
         document.getElementById("portfolioText").innerHTML += projectSummary.portfolio;
         document.getElementById("calculatorText").innerHTML += projectSummary.calculator;
-        document.getElementById("gatesText").innerHTML += projectSummary.logicGates;
+        document.getElementById("aluText").innerHTML += projectSummary.alu;
     }
 }
 
@@ -419,7 +419,7 @@ function getProjectNum(projectName) {
         ["ph-sensor", 5],
         ["portfolio", 6],
         ["multivibrator", 7],
-        ["logic-gates", 8]
+        ["alu", 8]
     ]);
     return projectMap.get(projectName.replace("/projects/", ""));
 }
@@ -535,6 +535,8 @@ function editTemplate(project, num) {
             slideshow.appendChild(captionContainer)
             slideshow.appendChild(buttonContainer);
 
+            number.innerHTML = "1/" + length;
+
             return false
         }
     }
@@ -575,7 +577,7 @@ export function template() {
 // adds text and media into template file
 export async function project(projectName) {
     let num = getProjectNum(projectName);
-    const projectParam = [param.chess, param.breathalyzer, param.blackjack, param.calculator, param.minesweeper, param.pHsensor, param.portfolio, param.multivibrator, param.logicGates];
+    const projectParam = [param.chess, param.breathalyzer, param.blackjack, param.calculator, param.minesweeper, param.pHsensor, param.portfolio, param.multivibrator, param.alu];
     let project = projectParam[num];
 
     // wait untill the template page has loaded
@@ -597,7 +599,7 @@ export async function project(projectName) {
         else { // add event llisteners to slideshow elements and initializes the slideshow
             import("./effects.js").then((effects) => {
                 effects.addListeners(project.captions)
-                effects.slideshow(1, project.captions);
+                effects.slideshow(0, project.captions);
             })
         }
     });

@@ -54,42 +54,42 @@ export function sleep(ms) {
 }
 
 
-// Next/previous controls
-let slideIndex = 1;
-async function plusSlides(n, captions) {
-    slideshow(slideIndex += n, captions);
-}
-
-
 // adds listeners to the prev and next buttons for the slideshow
 export function addListeners(captions) {
     let next = document.getElementById("next"),
         prev = document.getElementById("prev")
 
-    prev.addEventListener("click", function () { slideshow(0, captions) });
-    next.addEventListener("click", function () { slideshow(2, captions) })
+    prev.addEventListener("click", function () { slideshow(-1, captions) });
+    next.addEventListener("click", function () { slideshow(1, captions) })
 }
 
 
 // creates a slideshow to loop through project pictures
 export function slideshow(n, captions) {
-    let slideIndex = 1;
 
     let pictures = document.querySelectorAll(".slides"),
         number = document.getElementById("number"),
         caption = document.getElementById("caption"),
         totalPics = Number(pictures[pictures.length - 1].getAttribute("value")) + 1;
 
-    if (n < 1) { slideIndex = pictures.length }
+    let currentIndex = Number(number.innerHTML.slice(0, -2));
+    let slideIndex = currentIndex + n - 1;
+
+    if (slideIndex < 0) {
+        slideIndex = totalPics - 1;
+    }
+    else if (slideIndex == totalPics) {
+        slideIndex = 0;
+    }
 
     for (let i = 0; i < pictures.length; i++) {
         pictures[i].style.display = "none";
     }
-    pictures[slideIndex - 1].style.display = "inline-block";
-    number.innerHTML = (Number(pictures[slideIndex - 1].getAttribute("value")) + 1) + "/" + totalPics;
-    caption.innerHTML = captions[slideIndex - 1]
+    pictures[slideIndex].style.display = "inline-block";
+    number.innerHTML = (Number(pictures[slideIndex].getAttribute("value")) + 1) + "/" + totalPics;
+    caption.innerHTML = captions[slideIndex]
 
-    return slideIndex - 1;
+    return slideIndex;
 }
 
 

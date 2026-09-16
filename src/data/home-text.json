@@ -1,7 +1,7 @@
 {
-    "overview1": "• Hey there! I’m George Chen, an electrical engineering student at the University of Waterloo, focusing on firmware development in embedded systems and digital circuit design.",
+    "overview1": "• Hey there! I’m George Chen, an electrical engineering student at the University of Waterloo, focusing on embedded systems & software and firmware development.",
     "overview2": "• I love challenging myself and broadening my knowledge in new technologies and engineering topics through building projects in areas I find interesting.",
-    "overview3": "• Currently, I’m working on a TTL logic gates PCB, which will drive transistors to mimic the behaviour of basic logic gates.",
+    "overview3": "• Currently, I’m working on a 4 bit ALU PCB using static CMOS design.",
     "overview4": "• Some personal hobbies are dragon & lion dance, piano, powerlifting, mechanical keyboards, camping and mountain biking.",
     "plangroup1": "• Developed 5 internal tools in C# for Revit design optimization.",
     "plangroup2": "• Conducted quality control inspections in Revit for electrical floor plan layouts for Sick Kids Hospital.",

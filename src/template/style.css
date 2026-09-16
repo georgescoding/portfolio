@@ -436,7 +436,7 @@ button,
     justify-content: center;
     align-items: center;
     border: var(--light) 0.5vw solid;
-    max-height: 85vh;
+    height: 60vh;
     max-width: 57vw;
 }
 
