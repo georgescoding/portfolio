@@ -7,6 +7,9 @@ import keylogger from "./src/modules/effects.js";
 
 // root directory
 if (window.location.pathname == "/") {
+
+
+
     import("./src/modules/load-data.js").then((load) => {
         load.home();
         load.copyright();
@@ -18,6 +21,28 @@ if (window.location.pathname == "/") {
             load.observer();
             load.navbar();
         }, false);
+
+        const remind = document.getElementById("remind");
+
+        document.getElementById("main").addEventListener("scroll", () => {
+
+            if (document.getElementById("welcome").innerHTML == "Welcome to my portfolio website!" && document.querySelector("#collapsed-content .collapsedNav") == null) {
+                if (document.getElementById("main").scrollTop === 0) {
+                    remind.classList.remove("fadeOut");
+                    remind.style.visibility = "visible";
+                    remind.classList.add("animate");
+
+                }
+                else {
+                    remind.classList.remove("animate");
+                    remind.classList.add("fadeOut");
+                }
+            }
+
+        }, false);
+
+
+
     });
     import("./src/modules/effects.js").then((effects) => {
 

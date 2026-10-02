@@ -383,10 +383,7 @@ body {
     padding-bottom: 20vh;
     text-align: left;
     margin-left: 2vw;
-    animation: fade 2s linear;
-    animation-delay: 9s;
     opacity: 0;
-    animation-fill-mode: both;
     bottom: 0;
     width: max-content;
     position: relative;
@@ -394,7 +391,17 @@ body {
 }
 
 
-#remind.hide {
+#remind.animate,
+.button button.animate {
+    animation: fade 2s ease-out forwards;
+}
+
+#remind.fadeOut {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+#remind,
+.button button {
     visibility: hidden;
 }
 
@@ -457,6 +464,17 @@ cursor width is 1/2 border width */
     }
 }
 
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
 .button .readmore,
 .button .viewResume {
     background-color: var(--dark);
@@ -474,11 +492,9 @@ cursor width is 1/2 border width */
     font-size: 2.25vw;
     padding: 1vw 2vw;
     text-align: center;
-    animation: fade 2s linear;
-    animation-delay: 9s;
-    animation-fill-mode: both;
     margin-top: 30px;
 }
+
 
 .button button:hover,
 #ok:hover {

@@ -39,6 +39,21 @@ async function typing(text, textbox, delay = 75) {
         textbox.innerHTML += text[i];
         await sleep(delay);
     }
+
+    if (text == "Welcome to my portfolio website!") {
+
+        if (document.querySelector("#collapsed-content .collapsedNav") == null) {
+            document.getElementById("remind").style.visibility = "visible";
+            document.getElementById("remind").classList.add("animate");
+        }
+
+        let buttons = document.querySelectorAll(".button button");
+
+        buttons.forEach(element => {
+            element.style.visibility = "visible";
+            element.classList.add("animate");
+        });
+    }
 }
 
 
