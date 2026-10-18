@@ -15,9 +15,7 @@ export async function typewriter() {
 
     greetingBox.classList.add("start");
 
-    typing(text, greetingBox, 150);
-
-    await sleep(2100);
+    await typing(text, greetingBox, 150);
 
     welcomeBox.classList.add("start");
     greetingBox.removeAttribute("class");
@@ -28,7 +26,7 @@ export async function typewriter() {
     welcomeBox.removeAttribute("class");
     welcomeBox.classList.add("paused");
 
-    typing(welcome, welcomeBox, 150);
+    await typing(welcome, welcomeBox, 150);
 
     welcomeBox.classList.remove("paused");
     welcomeBox.classList.add("start");
@@ -36,8 +34,15 @@ export async function typewriter() {
 
 async function typing(text, textbox, delay = 75) {
     for (let i = 0; i < text.length; i++) {
-        textbox.innerHTML += text[i];
-        await sleep(delay);
+        textbox.textContent += text[i];
+
+        if (text.charAt(i) === ',' || text.charAt(i) === "'") {
+            await sleep(delay * 2);
+        }
+        else if (text.charAt(i) !== ' ') {
+            let randomDelay = Math.floor(Math.random() * 60) - 30;
+            await sleep(Math.max(40, delay + randomDelay));
+        }
     }
 
     if (text == "Welcome to my portfolio website!") {

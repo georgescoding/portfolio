@@ -328,6 +328,16 @@ body {
     overflow: visible;
 }
 
+#typing,
+#welcome {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    will-change: content;
+    contain: layout paint; 
+    white-space: nowrap;   
+}
+
 /* welcome page */
 #welcomePage h1 {
     overflow: hidden;
@@ -352,7 +362,6 @@ body {
 
 #welcomePage.portrait h2 {
     font-size: 4vw;
-    margin-left: 3px;
 }
 
 #welcomePage.portrait h2::after {
