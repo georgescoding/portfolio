@@ -231,7 +231,8 @@ body {
 #navbar a:hover,
 .right-nav a:hover,
 .collapsedNav button:hover,
-#projectNav:hover .fa-caret-down {
+#projectNav:hover .fa-caret-down,
+.right-nav p:hover {
     color: var(--light);
 }
 
@@ -334,8 +335,8 @@ body {
     width: 100%;
     margin: 0 auto;
     will-change: content;
-    contain: layout paint; 
-    white-space: nowrap;   
+    contain: layout paint;
+    white-space: nowrap;
 }
 
 /* welcome page */

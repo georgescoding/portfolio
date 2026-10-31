@@ -135,7 +135,8 @@ body {
 #navbar a:hover,
 .right-nav a:hover,
 .collapsedNav button:hover,
-#projectNav:hover .fa-caret-down {
+#projectNav:hover .fa-caret-down,
+.right-nav p:hover {
     color: var(--light);
 }
 

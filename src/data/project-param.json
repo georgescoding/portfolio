@@ -75,7 +75,7 @@
         "tools": "JavaScript, HTML, CSS",
         "github": "https://github.com/GeorgesCoding/Portfolio",
         "description": "Inspired by my friend and the desire to learn more about a new type of programming, decided to make a portfolio website. <br><br><br>At first, I did a simple coming soon page with a countdown made using JavaScript and a simple ellipsis animation to make the page come to life.<br><br><br> The original static a website was complete within 10 days, including my introduction, work experience and all my projects listed. <br><br><br>However, I felt that this current website felt lacking, especially after I took a look at more advanced websites and realized that there was no threshold to how simple or complicated my website could be, it was entirely up to me. <br><br><br>So I began with animating my nameusing a typewriter animation in JavaScript, paying homage to my hobby of speed typing and mechanical keyboards. After, I created asimple but functional button, moving on hover. <br><br><br>Lastly, I decided to use a card layout to display my projects. However, because I still wanted to include a small explanation of the project in the card, but wasn’t enough room. So I thought of making the card flip on click,with the backside being the short description and links to the GitHub page and individual project page with more details. <br><br><br>Below, I have included the coming soon page for my website that was used as a placeholder while I created the actual website.",
-        "old": "portfolio/coming-soon"
+        "download": "/projects/portfolio/coming-soon"
     },
     "multivibrator": {
         "name": "Multivibrator PCB",

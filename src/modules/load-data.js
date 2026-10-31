@@ -466,11 +466,7 @@ function editTemplate(project, num) {
         time = document.getElementById("time");
 
     // add or remove clickable button
-    if (num == 6) {
-        document.getElementById("button").innerHTML = "Click Me!";
-        click.setAttribute("href", "portfolio/coming-soon");
-    }
-    else if (typeof project.download == 'undefined') {
+    if (typeof project.download == 'undefined') {
         click.remove();
     }
     else {
